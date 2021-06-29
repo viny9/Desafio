@@ -1,0 +1,13 @@
+img {
+    height: 50%;
+    width: 50%;
+}
+
+.lista mat-list-item{
+    color: black;
+}
+
+.repositorios{
+    width: 40%;
+    margin-right: 10%;
+}
