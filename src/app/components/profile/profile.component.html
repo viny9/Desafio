@@ -1,10 +1,42 @@
-<div fxLayout="row" fxLayoutAlign="space-between">
-   <div fxLayout="column">
-        <img src="" alt="teste">
-     <div>
-        <mat-list class="lista">
-            <mat-list-item style="color: black;"></mat-list-item>
-         </mat-list>
-      </div>
+<div class="view" fxLayout="row" fxLayoutAlign="space-between">
+  <div class="profile">
+
+    <div fxLayout="row">
+      <img src="https://avatars.githubusercontent.com/u/{{userData.id}}?v=4" alt="img">
+      <div class="userName">
+        <h1>{{userData.name}}</h1>
+        <h2>{{userData.login}}</h2>
+      </div>  
+    </div>
+
+    <mat-list class="infos">
+       <h4 >
+         {{userData.bio}}
+       </h4>
+
+      <mat-list-item>
+        <mat-icon >people</mat-icon>
+        Followers: {{userData.followers}}  
+
+        <mat-icon class="follow" >people</mat-icon>
+        Following: {{userData.following}}
+      </mat-list-item>
+
+      <mat-list-item *ngIf="userData.location">
+        <mat-icon>room</mat-icon>
+       Location: {{userData.location}}
+      </mat-list-item>
+
+      <mat-list-item *ngIf="userData.company">
+        <mat-icon>business_center</mat-icon>
+        Work: {{userData.company}}
+      </mat-list-item>
+
+    </mat-list>
   </div>
+
+  <div class="repos">
+    <mat-card fxLayoutAlign="center">name</mat-card>
+  </div>
+
 </div>

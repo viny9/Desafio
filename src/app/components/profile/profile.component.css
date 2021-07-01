@@ -1,13 +1,23 @@
 img {
-    height: 50%;
-    width: 50%;
+    height: 40%;
+    width:  40%;
 }
 
-.lista mat-list-item{
+.infos mat-list-item{
     color: black;
+    font-size: small;
+    font-weight:bold;
 }
 
-.repositorios{
-    width: 40%;
-    margin-right: 10%;
+.repos{
+    width: 50%;
+    margin-right: 6%;
 }
+
+.userName{margin: 3% 0 0 2%}
+
+h1{font-weight: bolder;}
+
+.follow{padding-left: 1% ;}
+
+h4{width: 40%;}

@@ -18,13 +18,12 @@ import { MatListModule } from '@angular/material/list'
 import { MatCardModule } from '@angular/material/card'
 import { MatIconModule } from '@angular/material/icon'
 import { MatTreeModule} from '@angular/material/tree'
-import { MatButtonModule} from '@angular/material/button'
-
+import { MatButtonModule} from '@angular/material/button';
 @NgModule({
   declarations: [
     AppComponent,
     ToolbarComponent,
-    ProfileComponent
+    ProfileComponent,
   ],
   imports: [
     BrowserModule,
