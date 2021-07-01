@@ -1,22 +1,22 @@
-import { Component, OnInit, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-toolbar',
   templateUrl: './toolbar.component.html',
   styleUrls: ['./toolbar.component.css']
 })
-
 export class ToolbarComponent implements OnInit {
 
-  value:string = ''
+ @Output() user = new EventEmitter()
+ name:string = ''
 
   constructor() { }
 
-  ngOnInit(){
- }
+  ngOnInit(): void {
+  }
 
   getUserName(){
- console.log(this.value)
-}
+    this.user.emit(this.name)
+  }
 
 }

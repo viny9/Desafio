@@ -1,2 +1,2 @@
-<app-toolbar></app-toolbar>
-<app-profile></app-profile>
+<app-toolbar (user)="reciveName($event)"></app-toolbar>
+<app-profile [user]="name" ></app-profile>

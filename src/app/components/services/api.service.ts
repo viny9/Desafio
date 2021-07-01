@@ -18,12 +18,12 @@ export class ApiService {
   constructor ( private http:HttpClient ) { }
   
   
-  repos(usuario:string) :Observable<any> {
-    return this.http.get(this.api+'/users/'+usuario+'/repos')
+  repos(userName:string) :Observable<any> {
+    return this.http.get(this.api+'/users/'+userName+'/repos')
   }
   
-  usuario(usuario:string) :Observable<any> {
-    return this.http.get(this.api+'/users/'+usuario)
+  user(userName:string) :Observable<any> {
+    return this.http.get(this.api+'/users/'+userName)
   }
 
 }
