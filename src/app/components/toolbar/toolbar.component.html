@@ -1,6 +1,6 @@
 <mat-toolbar>
         <mat-form-field>    
-            <input type="text" placeholder="Search" matInput (keyup.enter)="getUserName()" [(ngModel)]="name">
+            <input type="text" autocomplete="off" placeholder="Search" matInput (keyup.enter)="getUserName()" [(ngModel)]="name">
         </mat-form-field>
         <button mat-button (click)="getUserName()">
             <mat-icon >search</mat-icon>

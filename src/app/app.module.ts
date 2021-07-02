@@ -20,6 +20,7 @@ import { MatIconModule } from '@angular/material/icon'
 import { MatTreeModule } from '@angular/material/tree'
 import { MatButtonModule } from '@angular/material/button';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,6 +43,7 @@ import { MatExpansionModule } from '@angular/material/expansion';
     HttpClientModule,
     MatButtonModule,
     MatExpansionModule,
+    MatSnackBarModule
 
   ],
   providers: [],
