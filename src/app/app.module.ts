@@ -17,8 +17,9 @@ import { MatInputModule } from '@angular/material/input';
 import { MatListModule } from '@angular/material/list'
 import { MatCardModule } from '@angular/material/card'
 import { MatIconModule } from '@angular/material/icon'
-import { MatTreeModule} from '@angular/material/tree'
-import { MatButtonModule} from '@angular/material/button';
+import { MatTreeModule } from '@angular/material/tree'
+import { MatButtonModule } from '@angular/material/button';
+import { MatExpansionModule } from '@angular/material/expansion';
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,6 +41,7 @@ import { MatButtonModule} from '@angular/material/button';
     MatTreeModule,
     HttpClientModule,
     MatButtonModule,
+    MatExpansionModule,
 
   ],
   providers: [],

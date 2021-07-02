@@ -6,25 +6,25 @@
       <div class="userName">
         <h1>{{userData.name}}</h1>
         <h2>{{userData.login}}</h2>
-      </div>  
+      </div>
     </div>
 
     <mat-list class="infos">
-       <h4 >
-         {{userData.bio}}
-       </h4>
+      <h4>
+        {{userData.bio}}
+      </h4>
 
       <mat-list-item>
-        <mat-icon >people</mat-icon>
-        Followers: {{userData.followers}}  
+        <mat-icon>people</mat-icon>
+        Followers: {{userData.followers}}
 
-        <mat-icon class="follow" >people</mat-icon>
+        <mat-icon class="follow">people</mat-icon>
         Following: {{userData.following}}
       </mat-list-item>
 
       <mat-list-item *ngIf="userData.location">
         <mat-icon>room</mat-icon>
-       Location: {{userData.location}}
+        Location: {{userData.location}}
       </mat-list-item>
 
       <mat-list-item *ngIf="userData.company">
@@ -36,7 +36,21 @@
   </div>
 
   <div class="repos">
-    <mat-card fxLayoutAlign="center">name</mat-card>
+    <mat-accordion *ngFor="let repos of repoData">
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title fxLayoutAlign="center">
+            {{repos.name }}
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <p *ngIf="repos.description" class="description"> {{repos.description}}</p>
+        <p *ngIf="repos.language">Language: {{repos.language}}</p>
+        <p>Forks: {{repos.forks}}</p>
+        <p>Created at: {{repos.created_at}} </p>
+        <p>Updated at: {{repos.updated_at}} </p>
+        <p>watchers: {{repos.watchers}}</p>
+      </mat-expansion-panel>
+    </mat-accordion>
   </div>
 
 </div>

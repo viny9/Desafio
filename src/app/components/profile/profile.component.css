@@ -1,7 +1,10 @@
 img {
     height: 40%;
     width:  40%;
+    border-radius: 100%;
 }
+
+.infos{ margin-left: 2%;}
 
 .infos mat-list-item{
     color: black;
@@ -11,13 +14,24 @@ img {
 
 .repos{
     width: 50%;
-    margin-right: 6%;
+    margin-right: 7%;
+    /* height: 100%; */
 }
 
-.userName{margin: 3% 0 0 2%}
+.repos mat-expansion-panel{
+    margin-bottom: 3%;
+
+}
+
+.userName{margin: 14% 0 0 2%}
 
 h1{font-weight: bolder;}
 
 .follow{padding-left: 1% ;}
 
 h4{width: 40%;}
+
+.description{
+    color:rgb(168, 160, 160);
+    margin-left: 5%;
+}
