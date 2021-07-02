@@ -1,6 +1,5 @@
 import { ApiService } from './../services/api.service';
 import { Component, Input, OnInit, SimpleChanges} from '@angular/core';
-
 @Component({
   selector: 'app-profile',
   templateUrl: './profile.component.html',
@@ -24,7 +23,7 @@ export class ProfileComponent implements OnInit {
 
  profile(value:any){
   this.api.user(value).subscribe((values)=>{
-    this.userData = values
+    this.userData = values 
     // console.log(this.userData)
   })
  }
