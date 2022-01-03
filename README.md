@@ -1,5 +1,5 @@
 # Desafio
-Aplicação utilizando a Api do github
+Aplicação em Angular utilizando a Api do github
 =======
 # Teste
 
