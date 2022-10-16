@@ -1,0 +1,28 @@
+.head {
+  border-bottom: 1px solid #3c4043;
+  max-width: 100%;
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+}
+
+.searchInput {
+  width: 50%;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+.searchBtn {
+  margin-top: 10px;
+}
+
+@media (max-width: 600px) {
+  .head {
+    padding: 0 10px;
+    height: 10%;
+  }
+
+  .searchInput {
+    min-width: 70%;
+  }
+}

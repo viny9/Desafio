@@ -7,15 +7,15 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 })
 export class ToolbarComponent implements OnInit {
 
- @Output() user = new EventEmitter()
- name:string = ''
+  @Output() user = new EventEmitter()
+  name: string = ''
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  getUserName(){
+  getUserName() {
     this.user.emit(this.name)
   }
 

@@ -1,24 +1,25 @@
-<div class="view" fxLayout="row" fxLayoutAlign="space-between">
+<div class="main">
   <div class="profile">
 
-    <div fxLayout="row">
+    <div class="userInformations">
       <img src="https://avatars.githubusercontent.com/u/{{userData.id}}?v=4" alt="img">
-      <div class="userName">
+      <div class="profileName">
         <h1>{{userData.name}}</h1>
         <h2>{{userData.login}}</h2>
       </div>
     </div>
 
-    <mat-list class="infos">
-      <h4>
-        {{userData.bio}}
-      </h4>
+    <h4 class="bio"> {{userData.bio}} </h4>
+
+    <mat-list class="profileInformations">
 
       <mat-list-item>
         <mat-icon>people</mat-icon>
         Followers: {{userData.followers}}
+      </mat-list-item>
 
-        <mat-icon class="follow">people</mat-icon>
+      <mat-list-item>
+        <mat-icon>people</mat-icon>
         Following: {{userData.following}}
       </mat-list-item>
 
@@ -35,20 +36,21 @@
     </mat-list>
   </div>
 
-  <div class="repos">
-    <mat-accordion *ngFor="let repos of repoData">
+  <div class="repositories">
+    <h1 fxLayoutAlign="center">Repositórios</h1>
+    <mat-accordion *ngFor="let repos of repositoriesData">
       <mat-expansion-panel>
         <mat-expansion-panel-header>
           <mat-panel-title fxLayoutAlign="center">
             {{repos.name }}
           </mat-panel-title>
         </mat-expansion-panel-header>
-        <p *ngIf="repos.description" class="description"> {{repos.description}}</p>
-        <p *ngIf="repos.language">Language: {{repos.language}}</p>
+        <p *ngIf="repos.description" class="repositoriesDescription"> {{repos.description}}</p>
+        <p *ngIf="repos.language">Linguagem mais usada: {{repos.language}}</p>
+        <p>Criado em: {{repos.created_at | date}} </p>
+        <p>Atualizado em: {{repos.updated_at | date}} </p>
         <p>Forks: {{repos.forks}}</p>
-        <p>Created at: {{repos.created_at}} </p>
-        <p>Updated at: {{repos.updated_at}} </p>
-        <p>watchers: {{repos.watchers}}</p>
+        <p>Visto: {{repos.watchers}}</p>
       </mat-expansion-panel>
     </mat-accordion>
   </div>

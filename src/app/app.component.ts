@@ -5,12 +5,11 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent { 
+export class AppComponent {
 
-  name:string = 'viny9'
+  name: string = 'viny9'
 
-  reciveName(username:string) {
-    // console.log(value)
+  reciveName(username: string) {
     this.name = username
   }
 }

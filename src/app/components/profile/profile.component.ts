@@ -1,5 +1,5 @@
 import { ApiService } from './../services/api.service';
-import { Component, Input, OnInit, SimpleChanges} from '@angular/core';
+import { Component, Input, OnInit, SimpleChanges } from '@angular/core';
 @Component({
   selector: 'app-profile',
   templateUrl: './profile.component.html',
@@ -7,32 +7,30 @@ import { Component, Input, OnInit, SimpleChanges} from '@angular/core';
 })
 export class ProfileComponent implements OnInit {
 
-  @Input() user:string = ''
-  userData:any = ''
-  repoData:any = ''
+  @Input() user: any
+  userData: any
+  repositoriesData: any
 
-  constructor(private api:ApiService) { }
-  
+  constructor(private api: ApiService) { }
+
   ngOnInit() {
- }
+  }
 
- ngOnChanges(changes:SimpleChanges){
-  this.profile(changes.user.currentValue)
-  this.repos(changes.user.currentValue)
- }
+  ngOnChanges(changes: SimpleChanges) {
+    this.loadProfile(changes.user.currentValue)
+  }
 
- profile(value:any){
-  this.api.user(value).subscribe((values)=>{
-    this.userData = values 
-    // console.log(this.userData)
-  })
- }
+  loadProfile(value: string) {
+    this.api.getUser(value).subscribe((values) => {
+      this.userData = values
+      this.loadRepositories(value)
+    })
+  }
 
- repos(value:string) {
-  this.api.repos(value).subscribe((values)=>{
-    this.repoData = values 
-    // console.log(this.repoData)
-  })
- }
+  loadRepositories(value: string) {
+    this.api.getRepositories(value).subscribe((values) => {
+      this.repositoriesData = values
+    })
+  }
 
- }
+}
