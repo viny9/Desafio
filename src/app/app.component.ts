@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  name: string = 'viny9'
+  name: string = 'viny9' // Mudar para seu nome de usuário 
 
   reciveName(username: string) {
     this.name = username
